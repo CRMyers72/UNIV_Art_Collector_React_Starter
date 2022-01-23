@@ -106,7 +106,7 @@ const Feature = ({ setIsLoading, featuredResult, setSearchResults }) => {
             <h4>{featuredResult.dated}</h4>
           </header>
           <ul>
-            <b>
+            <React.Fragment>
               {" "}
               {featuredResult.culture ? (
                 <section className="facts">
@@ -121,8 +121,8 @@ const Feature = ({ setIsLoading, featuredResult, setSearchResults }) => {
                   </span>
                 </section>
               ) : null}{" "}
-            </b>
-            <b>
+            </React.Fragment>
+            <React.Fragment>
               {featuredResult.technique ? (
                 <section className="facts">
                   <span className="title">Technique</span>
@@ -136,16 +136,16 @@ const Feature = ({ setIsLoading, featuredResult, setSearchResults }) => {
                   </span>
                 </section>
               ) : null}
-            </b>
-            <b>
+            </React.Fragment>
+            <React.Fragment>
               {featuredResult.dimensions ? (
                 <section className="facts">
                   <span className="title">Dimensions </span>
                   <span className="content">{featuredResult.dimensions}</span>
                 </section>
               ) : null}
-            </b>
-            <b>
+            </React.Fragment>
+            <React.Fragment>
               {featuredResult.medium ? (
                 <section className="facts">
                   <span className="title">Medium</span>
@@ -159,8 +159,8 @@ const Feature = ({ setIsLoading, featuredResult, setSearchResults }) => {
                   </span>
                 </section>
               ) : null}
-            </b>
-            <b>
+            </React.Fragment>
+            <React.Fragment>
               {featuredResult.people ? (
                 <section className="facts">
                   <span className="title">Person</span>
@@ -174,39 +174,39 @@ const Feature = ({ setIsLoading, featuredResult, setSearchResults }) => {
                   </span>
                 </section>
               ) : null}
-            </b>
-            <b>
+            </React.Fragment>
+            <React.Fragment>
               {featuredResult.department ? (
                 <section>
                   <span className="title">Department </span>
                   <span className="content">{featuredResult.department}</span>
                 </section>
               ) : null}
-            </b>
-            <b>
+            </React.Fragment>
+            <React.Fragment>
               {featuredResult.division ? (
                 <section>
                   <span className="title">Division </span>
                   <span className="content">{featuredResult.division}</span>
                 </section>
               ) : null}
-            </b>
-            <b>
+            </React.Fragment>
+            <React.Fragment>
               {featuredResult.contact ? (
                 <section>
                   <span className="title">Contact </span>
                   <span className="content">{featuredResult.contact}</span>
                 </section>
               ) : null}
-            </b>
-            <b>
+            </React.Fragment>
+            <React.Fragment>
               {featuredResult.credit ? (
                 <section>
                   <span className="title">Credit </span>
                   <span className="content">{featuredResult.credit}</span>
                 </section>
               ) : null}
-            </b>
+            </React.Fragment>
           </ul>
           <section className="photos">
             {featuredResult.images.map((image, index) => (
