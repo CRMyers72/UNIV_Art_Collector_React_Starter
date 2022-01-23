@@ -98,124 +98,126 @@ const Searchable = ({
  */
 const Feature = ({ setIsLoading, featuredResult, setSearchResults }) => {
   return (
-    <main id="feature">
-      {featuredResult && (
-        <div className="object-feature">
-          <header>
-            <h3>{featuredResult.title}</h3>
-            <h4>{featuredResult.dated}</h4>
-          </header>
-          <ul>
-            <React.Fragment>
-              {" "}
-              {featuredResult.culture ? (
-                <section className="facts">
-                  <span className="title">Culture</span>
-                  <span className="content">
-                    <Searchable
-                      setIsLoading={setIsLoading}
-                      searchTerm="culture"
-                      searchValue={featuredResult.culture}
-                      setSearchResults={setSearchResults}
-                    />
-                  </span>
-                </section>
-              ) : null}{" "}
-            </React.Fragment>
-            <React.Fragment>
-              {featuredResult.technique ? (
-                <section className="facts">
-                  <span className="title">Technique</span>
-                  <span className="content">
-                    <Searchable
-                      setIsLoading={setIsLoading}
-                      searchTerm="technique"
-                      searchValue={featuredResult.technique}
-                      setSearchResults={setSearchResults}
-                    />
-                  </span>
-                </section>
-              ) : null}
-            </React.Fragment>
-            <React.Fragment>
-              {featuredResult.dimensions ? (
-                <section className="facts">
-                  <span className="title">Dimensions </span>
-                  <span className="content">{featuredResult.dimensions}</span>
-                </section>
-              ) : null}
-            </React.Fragment>
-            <React.Fragment>
-              {featuredResult.medium ? (
-                <section className="facts">
-                  <span className="title">Medium</span>
-                  <span className="content">
-                    <Searchable
-                      setIsLoading={setIsLoading}
-                      searchTerm="medium"
-                      searchValue={featuredResult.medium}
-                      setSearchResults={setSearchResults}
-                    />
-                  </span>
-                </section>
-              ) : null}
-            </React.Fragment>
-            <React.Fragment>
-              {featuredResult.people ? (
-                <section className="facts">
-                  <span className="title">Person</span>
-                  <span className="content">
-                    <Searchable
-                      setIsLoading={setIsLoading}
-                      searchTerm="people"
-                      searchValue={featuredResult.people.displayname}
-                      setSearchResults={setSearchResults}
-                    />
-                  </span>
-                </section>
-              ) : null}
-            </React.Fragment>
-            <React.Fragment>
-              {featuredResult.department ? (
-                <section>
-                  <span className="title">Department </span>
-                  <span className="content">{featuredResult.department}</span>
-                </section>
-              ) : null}
-            </React.Fragment>
-            <React.Fragment>
-              {featuredResult.division ? (
-                <section>
-                  <span className="title">Division </span>
-                  <span className="content">{featuredResult.division}</span>
-                </section>
-              ) : null}
-            </React.Fragment>
-            <React.Fragment>
-              {featuredResult.contact ? (
-                <section>
-                  <span className="title">Contact </span>
-                  <span className="content">{featuredResult.contact}</span>
-                </section>
-              ) : null}
-            </React.Fragment>
-            <React.Fragment>
-              {featuredResult.credit ? (
-                <section>
-                  <span className="title">Credit </span>
-                  <span className="content">{featuredResult.credit}</span>
-                </section>
-              ) : null}
-            </React.Fragment>
-          </ul>
-          <section className="photos">
-            {featuredResult.images.map((image, index) => (
-              <img key={index} src={image.baseimageurl} alt={image.alttext} />
-            ))}
-          </section>
-        </div>
-      )}
-    </main>
+    <Fragment>
+      <main id="feature">
+        {featuredResult && (
+          <div className="object-feature">
+            <header>
+              <h3>{featuredResult.title}</h3>
+              <h4>{featuredResult.dated}</h4>
+            </header>
+            <ul>
+              <b>
+                {" "}
+                {featuredResult.culture ? (
+                  <section className="facts">
+                    <span className="title">Culture</span>
+                    <span className="content">
+                      <Searchable
+                        setIsLoading={setIsLoading}
+                        searchTerm="culture"
+                        searchValue={featuredResult.culture}
+                        setSearchResults={setSearchResults}
+                      />
+                    </span>
+                  </section>
+                ) : null}{" "}
+              </b>
+              <b>
+                {featuredResult.technique ? (
+                  <section className="facts">
+                    <span className="title">Technique</span>
+                    <span className="content">
+                      <Searchable
+                        setIsLoading={setIsLoading}
+                        searchTerm="technique"
+                        searchValue={featuredResult.technique}
+                        setSearchResults={setSearchResults}
+                      />
+                    </span>
+                  </section>
+                ) : null}
+              </b>
+              <b>
+                {featuredResult.dimensions ? (
+                  <section className="facts">
+                    <span className="title">Dimensions </span>
+                    <span className="content">{featuredResult.dimensions}</span>
+                  </section>
+                ) : null}
+              </b>
+              <b>
+                {featuredResult.medium ? (
+                  <section className="facts">
+                    <span className="title">Medium</span>
+                    <span className="content">
+                      <Searchable
+                        setIsLoading={setIsLoading}
+                        searchTerm="medium"
+                        searchValue={featuredResult.medium}
+                        setSearchResults={setSearchResults}
+                      />
+                    </span>
+                  </section>
+                ) : null}
+              </b>
+              <b>
+                {featuredResult.people ? (
+                  <section className="facts">
+                    <span className="title">Person</span>
+                    <span className="content">
+                      <Searchable
+                        setIsLoading={setIsLoading}
+                        searchTerm="people"
+                        searchValue={featuredResult.people.displayname}
+                        setSearchResults={setSearchResults}
+                      />
+                    </span>
+                  </section>
+                ) : null}
+              </b>
+              <b>
+                {featuredResult.department ? (
+                  <section>
+                    <span className="title">Department </span>
+                    <span className="content">{featuredResult.department}</span>
+                  </section>
+                ) : null}
+              </b>
+              <b>
+                {featuredResult.division ? (
+                  <section>
+                    <span className="title">Division </span>
+                    <span className="content">{featuredResult.division}</span>
+                  </section>
+                ) : null}
+              </b>
+              <b>
+                {featuredResult.contact ? (
+                  <section>
+                    <span className="title">Contact </span>
+                    <span className="content">{featuredResult.contact}</span>
+                  </section>
+                ) : null}
+              </b>
+              <b>
+                {featuredResult.credit ? (
+                  <section>
+                    <span className="title">Credit </span>
+                    <span className="content">{featuredResult.credit}</span>
+                  </section>
+                ) : null}
+              </b>
+            </ul>
+            <section className="photos">
+              {featuredResult.images.map((image, index) => (
+                <img key={index} src={image.baseimageurl} alt={image.alttext} />
+              ))}
+            </section>
+          </div>
+        )}
+      </main>
+    </Fragment>
   );
 };
 
