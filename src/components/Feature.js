@@ -166,12 +166,47 @@ const Feature = ({ setIsLoading, featuredResult, setSearchResults }) => {
                   <section className="facts">
                     <span className="title">Person</span>
                     <span className="content">
-                      <Searchable
-                        setIsLoading={setIsLoading}
-                        searchTerm="people"
-                        searchValue={featuredResult.people.displayname}
-                        setSearchResults={setSearchResults}
-                      />
+                      <span>
+                        <Searchable
+                          setIsLoading={setIsLoading}
+                          searchTerm="people"
+                          searchValue={featuredResult.people[0].displayname}
+                          setSearchResults={setSearchResults}
+                        />
+                      </span>
+                      {featuredResult.people[1] ? (
+                        <span>
+                          <span>, </span>
+                          <Searchable
+                            setIsLoading={setIsLoading}
+                            searchTerm="people"
+                            searchValue={featuredResult.people[1].name}
+                            setSearchResults={setSearchResults}
+                          />
+                        </span>
+                      ) : null}
+                      {featuredResult.people[2] ? (
+                        <span>
+                          <span>, </span>
+                          <Searchable
+                            setIsLoading={setIsLoading}
+                            searchTerm="people"
+                            searchValue={featuredResult.people[2].name}
+                            setSearchResults={setSearchResults}
+                          />
+                        </span>
+                      ) : null}
+                      {featuredResult.people[3] ? (
+                        <span>
+                          <span>, </span>
+                          <Searchable
+                            setIsLoading={setIsLoading}
+                            searchTerm="people"
+                            searchValue={featuredResult.people[3].name}
+                            setSearchResults={setSearchResults}
+                          />
+                        </span>
+                      ) : null}
                     </span>
                   </section>
                 ) : null}

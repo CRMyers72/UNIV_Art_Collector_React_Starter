@@ -32,7 +32,7 @@ const App = () => {
         featuredResult={featuredResult}
         setSearchResults={setSearchResults}
       />
-      {/* {/* <Loading /> use a ternary and render null if isLoading is false */}
+
       {isLoading ? <Loading /> : null}
     </div>
   );
